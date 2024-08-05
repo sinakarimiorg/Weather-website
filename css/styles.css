@@ -32,14 +32,23 @@ body {
     height: 100vh;
 }
 
+p {
+    margin: 0;
+}
+
 .white {
     color: white;
 }
 
-button{
+button {
     background: none;
     border: none;
     color: unset;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
 }
 
 .weather-container {
@@ -172,11 +181,12 @@ input:checked+.slider:before {
     font-weight: 900;
 }
 
-.weather-type-section i{
-font-size: .9rem;
+.weather-type-section i {
+    font-size: .9rem;
 }
-.weather-type-section span{
-font-size: 1.3rem;
+
+.weather-type-section span {
+    font-size: 1.3rem;
 }
 
 
@@ -184,4 +194,102 @@ font-size: 1.3rem;
 .right-side {
     background-color: var(--light-blue);
     border-radius: 2.5rem;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+}
+
+.profile-image:hover {
+    cursor: pointer;
+}
+
+.right-side-top {
+    height: 40%;
+}
+
+.hours-box {
+    border: none;
+    border-radius: 1.3rem;
+}
+
+.hours-box-top p {
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: var(--light-blue);
+}
+
+.hours-box-btns button {
+    background-color: #F1F1F1;
+    font-size: .8rem;
+    padding: 5px 9px;
+    border-radius: 7px;
+    letter-spacing: .1rem;
+}
+
+.border-blue{
+    background-color: var(--dark-blue);
+    height: 10px;
+    width: 120%;
+    margin-top: 1rem;
+}
+
+.precipitaion-btn {
+    background-color: #f1f1f1ad !important;
+    color: rgba(0, 0, 0, 0.637) !important;
+}
+
+.hours-box-btns i {
+    font-size: .6rem;
+}
+
+.hours-box-bottom img {
+    width: 30px;
+    height: 30px;
+}
+
+.times-temp-hour{
+    font-size: .8rem;
+}
+
+.times-temp-degree {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.right-side-bottom{
+    height: 45%;
+}
+
+.details-box-title{
+    font-weight: bold;
+    padding-left: .7rem;
+}
+
+.detail-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 1.3rem;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.detail-box img{
+    width: 25px;
+    height: 25px;
+    border-radius: 7px;
+    padding: 3px;
+    background-color: var(--dark-blue);
+    margin-bottom: 7px;
 }
