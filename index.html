@@ -17,49 +17,60 @@
     <div class="weather-container d-flex justify-content-center align-items-center ">
         <div
             class="home-box d-flex flex-row justify-content-center align-items-center card w-100 h-100 overflow-hidden">
+
             <div class="left-side col-3 h-100">
+
                 <section class="temp-detail h-50 w-100">
-                    <header class="d-flex flex-column justify-content-start w-100 h-50">
+
+                    <header class="left-side-header d-flex flex-column justify-content-start w-100 h-50">
+
                         <section class="top-bar d-flex flex-row justify-content-between w-100 mb-4 mt-3">
-                            <div class="add-city-div d-flex flex-row justify-content-start align-items-center w-50">
-                                <button><i class="fa-solid fa-square-plus"></i></button>
+
+                            <div class="add-city-div d-flex flex-row justify-content-start align-items-center">
+
+                                <button class="add-city-btn"><i class="fa-solid fa-square-plus"></i></button>
+                                <div class="search-box d-none justify-content-center align-items-center">
+                                    <input class="search-input" type="text" placeholder="Type to search...">
+                                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <button class="close-search-bar-btn"><i class="fa-solid fa-xmark"></i></button>
+                                </div>
                             </div>
                             <div class="degree-unit-switch d-flex flex-row justify-content-end align-items-center w-50">
                                 <span>°C</span>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input class="degree-type-switch" type="checkbox">
                                     <span class="slider round"></span>
                                 </label>
                                 <span>°F</span>
                             </div>
                         </section>
 
-                        <section class="nav-bar white d-flex flex-column justify-content-between w-100 pl-3">
+                        <section class="nav-bar white d-flex flex-column justify-content-between w-100 pl-1">
                             <div
                                 class="first-line-nav-bar d-flex flex-row justify-content-between align-items-center w-100">
                                 <p
                                     class="left-side-navbar d-flex flex-row justify-content-center align-items-center m-0">
                                     <i class="fa-solid fa-location-arrow pr-2"></i>
-                                    <span class="city-name">New York</span>,
-                                    <span class="country-name pl-2">USA</span>
+                                    <span class="city-name"></span>,
+                                    <span class="country-name pl-2"></span>
                                 </p>
                                 <p
-                                    class="right-side-navbar d-flex flex-row justify-content-center align-items-center m-0 pr-2">
+                                    class="right-side-navbar d-flex flex-row justify-content-center align-items-center m-0 pr-1">
                                     <img class="sunrise-icon pb-2 h-25 pr-2" src="images/icons8-sunrise-30.png"
                                         alt="sunrise">
-                                    <span class="sunrise-time">7:14</span>
+                                    <span class="sunrise-time"></span>
                                 </p>
                             </div>
                             <div
                                 class="second-line-nav-bar d-flex flex-row justify-content-between align-items-center w-100">
                                 <p class="left-side-navbar"> Today
-                                    <span class="today-date">22</span>
-                                    <span class="today-month">Aug</span>
+                                    <span class="today-date"></span>
+                                    <span class="today-month"></span>
                                 </p>
                                 <p
                                     class="right-side-navbar d-flex flex-row justify-content-center align-items-center pr-2">
-                                    <img class="sunrise-icon pb-2" src="images/icons8-sunset-30.png" alt="sunrise">
-                                    <span class="sunrise-time pl-2 ">19:34</span>
+                                    <img class="sunset-icon pb-2" src="images/icons8-sunset-30.png" alt="sunrise">
+                                    <span class="sunset-time pl-2 "></span>
                                 </p>
                             </div>
                         </section>
@@ -67,16 +78,16 @@
 
                     <section class="temperature-section white d-flex justify-content-between align-items-center">
                         <button><i class="fa-solid fa-chevron-left"></i> </button>
-                        <span class="temperature"> 31°</span>
+                        <span class="temperature pl-5"> 31°</span>
                         <Button><i class="fa-solid fa-chevron-right"></i></Button>
                     </section>
                     <section class="weather-type-section white d-flex justify-content-center w-100 align-items-center">
-                        <i class="fa-regular fa-sun d-none pl-2"></i>
-                        <i class="fa-solid fa-cloud-sun d-none pl-2"></i>
-                        <i class="fa-solid fa-wind pl-2"></i>
-                        <i class="fa-solid fa-cloud-showers-heavy d-none pl-2"></i>
-                        <i class="fa-regular fa-snowflake d-none pl-2"></i>
-                        <span class="weather-type pl-2 pr-2">Windy</span>
+                        <i class="sunny fa-regular fa-sun pl-2"></i>
+                        <i class="cloudy fa-solid fa-cloud pl-2"></i>
+                        <i class="windy fa-solid fa-wind pl-2"></i>
+                        <i class="rainy fa-solid fa-cloud-showers-heavy pl-2"></i>
+                        <i class="snowy fa-regular fa-snowflake pl-2"></i>
+                        <span class="weather-type pl-2 pr-2"></span>
                     </section>
                 </section>
 
@@ -93,7 +104,7 @@
 
                     <div class="profile-section d-flex justify-content-end w-50">
                         <button class="profile-bar-btn pr-4"><i class="fa-solid fa-ellipsis"></i></button>
-                        <img class="profile-image" src="images/profile-120x120.jpg" alt="">
+                        <img class="profile-image" src="images/profile-120x120.jpg" alt="Your Profile">
                     </div>
                 </header>
 
@@ -199,14 +210,15 @@
                             </div>
                         </div>
 
-                        <div class="second-row-of-boxs row w-100 row d-flex justify-content-between align-items-center mt-4">
+                        <div
+                            class="second-row-of-boxs row w-100 row d-flex justify-content-between align-items-center mt-3">
                             <div class="detail-box card col-3">
                                 <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
                                     <h6>UV index</h6>
                                     <img src="images/icons8-sun-white.png" alt="Humidity">
                                 </div>
                                 <div class="detail-box-bottom pt-2">
-                                    <p><span>4</span> medium</p>
+                                    <p class="uv-index-text"><span>4</span> medium</p>
                                 </div>
                                 <div class="border-blue"> </div>
                             </div>

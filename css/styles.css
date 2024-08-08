@@ -18,6 +18,7 @@
     --dark-blue: #5C9CE5;
     --light-blue: #E4F1FF;
     --gray: #dcdcdc;
+    --pink: #F2BAE9
 }
 
 * {
@@ -76,14 +77,59 @@ button:focus {
     padding: 0 1.5rem;
 }
 
+.left-side-header {
+    padding-top: 1rem;
+}
+
 .top-bar {
-    height: 35%;
+    height: 4vh;
+}
+
+.add-city-div {
+    width: 85%;
 }
 
 .add-city-div i {
     color: white;
-    font-size: x-large;
+    font-size: 1.9rem;
     padding-left: 1rem;
+}
+
+.close-search-bar-btn {
+    background-color: #F2BAE9;
+    margin-left: .5rem;
+    height: 3vh;
+}
+
+.close-search-bar-btn i {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .3rem .4rem;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    background-color: var(--gray);
+    position: relative;
+    border-radius: 15px;
+    margin-left: .5rem;
+    padding-left: 8px;
+}
+
+.search-input {
+    font-size: .9rem;
+    width: 95%;
+    border: none;
+    background-color: unset;
+    outline: none;
+}
+
+.search-button i {
+    color: black;
+    font-size: .9rem;
+    padding: 3px 0;
 }
 
 .degree-unit-switch span {
@@ -235,7 +281,7 @@ input:checked+.slider:before {
     letter-spacing: .1rem;
 }
 
-.border-blue{
+.border-blue {
     background-color: var(--dark-blue);
     height: 10px;
     width: 120%;
@@ -256,7 +302,7 @@ input:checked+.slider:before {
     height: 30px;
 }
 
-.times-temp-hour{
+.times-temp-hour {
     font-size: .8rem;
 }
 
@@ -265,16 +311,16 @@ input:checked+.slider:before {
     font-weight: bold;
 }
 
-.right-side-bottom{
+.right-side-bottom {
     height: 45%;
 }
 
-.details-box-title{
+.details-box-title {
     font-weight: bold;
     padding-left: .7rem;
 }
 
-.detail-box{
+.detail-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -285,11 +331,31 @@ input:checked+.slider:before {
     padding-bottom: 0;
 }
 
-.detail-box img{
+.detail-box img {
     width: 25px;
     height: 25px;
     border-radius: 7px;
     padding: 3px;
     background-color: var(--dark-blue);
     margin-bottom: 7px;
+}
+
+.detail-box h6 {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.detail-box p {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.uv-index-text {
+    font-size: .8rem !important;
+    font-weight: normal !important;
+}
+
+.uv-index-text span {
+    font-size: 1.2rem;
+    font-weight: 900;
 }
