@@ -55,15 +55,54 @@ button:focus {
 .weather-container {
     margin: 10% 0;
     width: 80%;
-    height: 70%;
+    height: 80%;
 }
 
 .home-box {
+    height: 88%;
     background-color: var(--dark-blue);
     border: none;
     border-radius: 2.50rem;
 }
 
+/* ///////////////////////tooltip styles  */
+
+.tooltipp {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipp .tooltiptext {
+    visibility: hidden;
+    width: 4rem;
+    font-size: .8rem;
+    font-weight: 100;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 150%;
+    margin-left: -60px;
+}
+
+.tooltipp .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltipp:hover .tooltiptext {
+    visibility: visible;
+}
 
 /* //////////////////////////////////////////////////left-side-styles////////////////////////////////////////////////////////////////////////////////////// */
 .left-side {
@@ -225,6 +264,7 @@ input:checked+.slider:before {
 .temperature {
     font-size: 5rem;
     font-weight: 900;
+    text-shadow: 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .weather-type-section i {
@@ -358,4 +398,17 @@ input:checked+.slider:before {
 .uv-index-text span {
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+/* //////////////developer text  */
+.develper-text{
+    height: 12%;
+}
+.develper-text span {
+    font-weight: bold;
+}
+
+.github-icon {
+    font-size: 1.3rem;
+    cursor: pointer;
 }

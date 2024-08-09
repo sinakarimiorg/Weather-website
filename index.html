@@ -14,9 +14,8 @@
 </head>
 
 <body class="d-flex justify-content-center align-items-center">
-    <div class="weather-container d-flex justify-content-center align-items-center ">
-        <div
-            class="home-box d-flex flex-row justify-content-center align-items-center card w-100 h-100 overflow-hidden">
+    <div class="weather-container d-flex flex-column justify-content-center align-items-start ">
+        <div class="home-box d-flex flex-row justify-content-center align-items-center card w-100 overflow-hidden">
 
             <div class="left-side col-3 h-100">
 
@@ -91,7 +90,12 @@
                     </section>
                 </section>
 
-                <section class="temp-img w-100 h-50"><img class="weather-img" src="images/Windy day-pana.png" alt="now">
+                <section class="temp-img w-100 h-50">
+                    <img class="weather-img cloudy-img" src="images/Flying kite-bro.png" alt="now">
+                    <img class="weather-img sunny-img" src="images/Sunny day-cuate.png" alt="now">
+                    <img class="weather-img windy-img" src="images/Windy day-pana.png" alt="now">
+                    <img class="weather-img rainy-img" src="images/Raining-cuate.png" alt="now">
+                    <img class="weather-img snowy-img" src="images/Snowfalling-bro.png" alt="now">
                 </section>
             </div>
 
@@ -104,7 +108,10 @@
 
                     <div class="profile-section d-flex justify-content-end w-50">
                         <button class="profile-bar-btn pr-4"><i class="fa-solid fa-ellipsis"></i></button>
-                        <img class="profile-image" src="images/profile-120x120.jpg" alt="Your Profile">
+                        <div class="tooltipp">
+                            <img class="profile-image" src="images/profile-120x120.jpg" alt="Your Profile">
+                            <span class="tooltiptext">GitHub</span>
+                        </div>
                     </div>
                 </header>
 
@@ -132,37 +139,37 @@
                                 <span class="times-temp-degree pl-1">27°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">11:00</span>
+                                <span class="first-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloudy-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">12:00</span>
+                                <span class="second-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloud-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">13:00</span>
+                                <span class="third-hour times-temp-hour"></span>
                                 <img src="images/icons8-sun-50.png" alt="">
                                 <span class="times-temp-degree pl-1">30°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">14:00</span>
+                                <span class="fourth-hour times-temp-hour"></span>
                                 <img src="images/icons8-sun-50.png" alt="">
                                 <span class="times-temp-degree pl-1">30°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">15:00</span>
+                                <span class="fifth-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloud-50.png" alt="">
                                 <span class="times-temp-degree pl-1">29°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">16:00</span>
+                                <span class="sixth-hour times-temp-hour"></span>
                                 <img src="images/icons8-rain-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
                             <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
-                                <span class="times-temp-hour">17:00</span>
+                                <span class="seventh-hour times-temp-hour"></span>
                                 <img src="images/icons8-rain-50.png" alt="">
                                 <span class="times-temp-degree pl-1">27°</span>
                             </div>
@@ -193,7 +200,7 @@
                                     <img src="images/icons8-wind-50.png" alt="Humidity">
                                 </div>
                                 <div class="detail-box-bottom pt-2">
-                                    <p><span>8</span> km/h</p>
+                                    <p><span class="wind-quantity"></span> km/h</p>
                                 </div>
                                 <div class="border-blue"> </div>
                             </div>
@@ -229,7 +236,7 @@
                                     <img src="images/icons8-temperature-48.png" alt="Humidity">
                                 </div>
                                 <div class="detail-box-bottom pt-2">
-                                    <p><span>30</span>°</p>
+                                    <p><span class="feels-like-temp">30</span>°</p>
                                 </div>
                                 <div class="border-blue"> </div>
                             </div>
@@ -248,6 +255,13 @@
                     </div>
                 </section>
             </div>
+        </div>
+        <div class="develper-text pl-3 pt-4 w-100 d-flex justify-content-start align-items-start">
+            <span>*Developed by Sina karimi</span>
+            <button class="tooltipp">
+                <i class="github-icon pl-3 fa-brands fa-github"></i>
+                <span class="tooltiptext">GitHub</span>
+            </button>
         </div>
     </div>
 

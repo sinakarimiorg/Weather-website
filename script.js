@@ -21,11 +21,31 @@ let windyIcon = $.querySelector('.windy')
 let rainyIcon = $.querySelector('.rainy')
 let snowyIcon = $.querySelector('.snowy')
 let profileBarBtn = $.querySelector('.profile-bar-btn')
+//////////weather images
+let cloudyImg = $.querySelector('.cloudy-img')
+let sunnyImg = $.querySelector('.sunny-img')
+let windyImg = $.querySelector('.windy-img')
+let rainyImg = $.querySelector('.rainy-img')
+let snowyImg = $.querySelector('.snowy-img')
+//////////right side
+let humidityPercent = $.querySelector('.humidity-percent')
+let windQuantity = $.querySelector('.wind-quantity')
+let feelsLikeTemp = $.querySelector('.feels-like-temp')
+//////////hours section
+let firstHour = $.querySelector('.first-hour')
+let secondHour = $.querySelector('.second-hour')
+let thirdHour = $.querySelector('.third-hour')
+let fourthHour = $.querySelector('.fourth-hour')
+let fifthHour = $.querySelector('.fifth-hour')
+let sixthHour = $.querySelector('.sixth-hour')
+let seventhHour = $.querySelector('.seventh-hour')
+
+
 
 
 let apiData = {
     url: 'https://api.openweathermap.org/data/2.5/weather?q=',
-    apiKey: '604233a90ebcb24af0451d05bae20f7b'
+    apiKey: '604233a90ebcb24af0451d05bae20f7b',
 }
 
 addCityBtn.addEventListener('click', () => {
@@ -72,6 +92,17 @@ let hideIcones = () => {
     sunnyIcon.classList.add('d-none')
 }
 
+let hideImagesFunc = () => {
+    cloudyImg.classList.add('d-none')
+    sunnyImg.classList.add('d-none')
+    windyImg.classList.add('d-none')
+    rainyImg.classList.add('d-none')
+    snowyImg.classList.add('d-none')
+}
+
+let now = new Date
+let nowHour = now.getHours()
+
 let showData = (data) => {
     console.log(data);
     cityName.innerHTML = data.name
@@ -87,24 +118,47 @@ let showData = (data) => {
         weatherType.innerHTML = 'cloudy'
         hideIcones()
         cloudyIcon.classList.remove('d-none')
+        hideImagesFunc()
+        cloudyImg.classList.remove('d-none')
 
     } else if (dataTypeWord === 'Rain') {
         weatherType.innerHTML = 'rainy'
         hideIcones()
         rainyIcon.classList.remove('d-none')
+        hideImagesFunc()
+        rainyImg.classList.remove('d-none')
     } else if (dataTypeWord === 'Clear') {
         weatherType.innerHTML = 'Sunny'
         hideIcones()
         sunnyIcon.classList.remove('d-none')
+        hideImagesFunc()
+        sunnyImg.classList.remove('d-none')
     } else if (dataTypeWord === 'Snow') {
         weatherType.innerHTML = 'Sunny'
         hideIcones()
         snowyIcon.classList.remove('d-none')
+        hideImagesFunc()
+        snowyImg.classList.remove('d-none')
     }
     else {
         weatherType.innerHTML = data.weather[0].main
         hideIcones()
+        hideImagesFunc()
+        windyImg.classList.remove('d-none')
     }
+    ///////////////Upcoming hours section
+    console.log(nowHour);
+    firstHour.innerHTML = `${(nowHour === 24 ? '01' : nowHour + 1)}:00`
+    secondHour.innerHTML = `${Number(firstHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(firstHour.innerHTML.slice(0, 2)) + 1}:00`
+    thirdHour.innerHTML = `${Number(secondHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(secondHour.innerHTML.slice(0, 2)) + 1}:00`
+    fourthHour.innerHTML = `${Number(thirdHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(thirdHour.innerHTML.slice(0, 2)) + 1}:00`
+    fifthHour.innerHTML = `${Number(fourthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(fourthHour.innerHTML.slice(0, 2)) + 1}:00`
+    sixthHour.innerHTML = `${Number(fifthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(fifthHour.innerHTML.slice(0, 2)) + 1}:00`
+    seventhHour.innerHTML = `${Number(sixthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(sixthHour.innerHTML.slice(0, 2)) + 1}:00`
+    ///////////////detail boxs Quantities
+    windQuantity.innerHTML = Math.floor(data.wind.speed)
+    humidityPercent.innerHTML = Math.floor(data.main.humidity)
+    feelsLikeTemp.innerHTML = Math.floor(data.main.feels_like)
 }
 
 window.addEventListener('load', () => {
