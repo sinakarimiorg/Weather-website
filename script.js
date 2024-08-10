@@ -102,6 +102,8 @@ let hideImagesFunc = () => {
 
 let now = new Date
 let nowHour = now.getHours()
+let mainTemperatureQuantity;
+let feelsLikeTempQuantity;
 
 let showData = (data) => {
     console.log(data);
@@ -109,7 +111,8 @@ let showData = (data) => {
     countryName.innerHTML = data.sys.country
     sunriseTime.innerHTML = timeConverter(data.sys.sunrise).time
     sunsetTime.innerHTML = timeConverter(data.sys.sunset).time
-    mainTemperature.innerHTML = `${Math.floor(data.main.temp)}°`
+    mainTemperature.innerHTML = Math.floor(data.main.temp)
+    mainTemperatureQuantity = Math.floor(data.main.temp)
     todayDate.innerHTML = timeConverter(data.sys.sunset).date
     todayMonth.innerHTML = timeConverter(data.sys.sunset).month
     ///////////////weather type section
@@ -147,18 +150,31 @@ let showData = (data) => {
         windyImg.classList.remove('d-none')
     }
     ///////////////Upcoming hours section
-    console.log(nowHour);
     firstHour.innerHTML = `${(nowHour === 24 ? '01' : nowHour + 1)}:00`
+    firstHour.innerHTML.length === 5 ? firstHour.innerHTML = firstHour.innerHTML : firstHour.innerHTML = `0${firstHour.innerHTML}`
+
     secondHour.innerHTML = `${Number(firstHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(firstHour.innerHTML.slice(0, 2)) + 1}:00`
+    secondHour.innerHTML.length === 5 ? secondHour.innerHTML = secondHour.innerHTML : secondHour.innerHTML = `0${secondHour.innerHTML}`
+
     thirdHour.innerHTML = `${Number(secondHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(secondHour.innerHTML.slice(0, 2)) + 1}:00`
+    thirdHour.innerHTML.length === 5 ? thirdHour.innerHTML = thirdHour.innerHTML : thirdHour.innerHTML = `0${thirdHour.innerHTML}`
+
     fourthHour.innerHTML = `${Number(thirdHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(thirdHour.innerHTML.slice(0, 2)) + 1}:00`
+    fourthHour.innerHTML.length === 5 ? fourthHour.innerHTML = fourthHour.innerHTML : fourthHour.innerHTML = `0${fourthHour.innerHTML}`
+
     fifthHour.innerHTML = `${Number(fourthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(fourthHour.innerHTML.slice(0, 2)) + 1}:00`
+    fifthHour.innerHTML.length === 5 ? fifthHour.innerHTML = fifthHour.innerHTML : fifthHour.innerHTML = `0${fifthHour.innerHTML}`
+
     sixthHour.innerHTML = `${Number(fifthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(fifthHour.innerHTML.slice(0, 2)) + 1}:00`
+    sixthHour.innerHTML.length === 5 ? sixthHour.innerHTML = sixthHour.innerHTML : sixthHour.innerHTML = `0${sixthHour.innerHTML}`
+
     seventhHour.innerHTML = `${Number(sixthHour.innerHTML.slice(0, 2)) === 24 ? '01' : Number(sixthHour.innerHTML.slice(0, 2)) + 1}:00`
+    seventhHour.innerHTML.length === 5 ? seventhHour.innerHTML = seventhHour.innerHTML : seventhHour.innerHTML = `0${seventhHour.innerHTML}`
     ///////////////detail boxs Quantities
     windQuantity.innerHTML = Math.floor(data.wind.speed)
     humidityPercent.innerHTML = Math.floor(data.main.humidity)
     feelsLikeTemp.innerHTML = Math.floor(data.main.feels_like)
+    feelsLikeTempQuantity =Math.floor(data.main.feels_like)
 }
 
 window.addEventListener('load', () => {
@@ -180,5 +196,16 @@ searchInput.addEventListener('keypress', (event) => {
         fetchFunc(searchInput.value)
         searchInput.value = ''
         showData()
+    }
+})
+
+changeDegreeTypeBtn.addEventListener('click', () => {
+    changeDegreeTypeBtn.classList.toggle('fahrenheit')
+    if (changeDegreeTypeBtn.className === 'degree-type-switch') {
+        mainTemperature.innerHTML = mainTemperatureQuantity
+        feelsLikeTemp.innerHTML = feelsLikeTempQuantity
+    } else {
+        mainTemperature.innerHTML = Math.floor(Number(mainTemperature.innerHTML) * 1.8 + 32)
+        feelsLikeTemp.innerHTML = Math.floor(Number(feelsLikeTemp.innerHTML) * 1.8 + 32)
     }
 })
