@@ -1,5 +1,6 @@
 const $ = document
 
+let topBarContainer = $.querySelector('.top-bar')
 let addCityBtn = $.querySelector('.add-city-btn')
 let searchCityBox = $.querySelector('.search-box')
 let searchInput = $.querySelector('.search-input')
@@ -49,11 +50,13 @@ let apiData = {
 }
 
 addCityBtn.addEventListener('click', () => {
+    topBarContainer.classList.add('flex-column')
     addCityBtn.classList.add('d-none')
     searchCityBox.classList.remove('d-none')
 })
 
 closeSearchInputBtn.addEventListener('click', () => {
+    topBarContainer.classList.remove('flex-column')
     addCityBtn.classList.remove('d-none')
     searchCityBox.classList.add('d-none')
     searchInput.value = ''
@@ -174,7 +177,7 @@ let showData = (data) => {
     windQuantity.innerHTML = Math.floor(data.wind.speed)
     humidityPercent.innerHTML = Math.floor(data.main.humidity)
     feelsLikeTemp.innerHTML = Math.floor(data.main.feels_like)
-    feelsLikeTempQuantity =Math.floor(data.main.feels_like)
+    feelsLikeTempQuantity = Math.floor(data.main.feels_like)
 }
 
 window.addEventListener('load', () => {
@@ -183,7 +186,6 @@ window.addEventListener('load', () => {
 })
 
 searchButton.addEventListener('click', function () {
-    console.log(searchInput.value);
     if (searchInput.value) {
         fetchFunc(searchInput.value)
         searchInput.value = ''

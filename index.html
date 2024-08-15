@@ -15,26 +15,30 @@
 
 <body class="d-flex justify-content-center align-items-center">
     <div class="weather-container d-flex flex-column justify-content-center align-items-start ">
-        <div class="home-box d-flex flex-row justify-content-center align-items-center card w-100 overflow-hidden">
+        <div class="home-box d-flex align-items-center card w-100 overflow-hidden">
 
-            <div class="left-side col-3 h-100">
+            <div class="left-side d-flex flex-column col-lg-3">
 
-                <section class="temp-detail h-50 w-100">
+                <section class="temp-detail w-100">
 
-                    <header class="left-side-header d-flex flex-column justify-content-start w-100 h-50">
+                    <header class="left-side-header d-flex flex-column justify-content-start w-100">
 
-                        <section class="top-bar d-flex flex-row justify-content-between w-100 mb-4 mt-3">
+                        <section class="top-bar d-flex justify-content-between w-100">
 
                             <div class="add-city-div d-flex flex-row justify-content-start align-items-center">
 
-                                <button class="add-city-btn"><i class="fa-solid fa-square-plus"></i></button>
+                                <button class="add-city-btn"><i
+                                        class="add-city-icon fa-solid fa-square-plus"></i></button>
                                 <div class="search-box d-none justify-content-center align-items-center">
                                     <input class="search-input" type="text" placeholder="Type to search...">
-                                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                                    <button class="close-search-bar-btn"><i class="fa-solid fa-xmark"></i></button>
+                                    <button class="search-button"><i
+                                            class="add-city-input-icon fa-solid fa-magnifying-glass"></i></button>
+                                    <button class="close-search-bar-btn"><i
+                                            class="add-city-input-icon fa-solid fa-xmark"></i></button>
                                 </div>
                             </div>
-                            <div class="degree-unit-switch d-flex flex-row justify-content-end align-items-center w-50">
+
+                            <div class="degree-unit-switch d-flex flex-row justify-content-end align-items-center">
                                 <span>°C</span>
                                 <label class="switch">
                                     <input class="degree-type-switch" type="checkbox">
@@ -44,32 +48,31 @@
                             </div>
                         </section>
 
+                        <div class="border-light"> </div>
+
                         <section class="nav-bar white d-flex flex-column justify-content-between w-100 pl-1">
-                            <div
-                                class="first-line-nav-bar d-flex flex-row justify-content-between align-items-center w-100">
+                            <div class="first-line-nav-bar d-flex flex-row align-items-center w-100">
                                 <p
                                     class="left-side-navbar d-flex flex-row justify-content-center align-items-center m-0">
-                                    <i class="fa-solid fa-location-arrow pr-2"></i>
+                                    <i class="fa-solid fa-location-arrow"></i>
                                     <span class="city-name"></span>,
                                     <span class="country-name pl-2"></span>
                                 </p>
                                 <p
                                     class="right-side-navbar d-flex flex-row justify-content-center align-items-center m-0 pr-1">
-                                    <img class="sunrise-icon pb-2 h-25 pr-2" src="images/icons8-sunrise-30.png"
-                                        alt="sunrise">
+                                    <img class="sunrise-icon pr-1" src="images/icons8-sunrise-30.png" alt="sunrise">
                                     <span class="sunrise-time"></span>
                                 </p>
                             </div>
-                            <div
-                                class="second-line-nav-bar d-flex flex-row justify-content-between align-items-center w-100">
+                            <div class="second-line-nav-bar d-flex flex-row align-items-center w-100">
                                 <p class="left-side-navbar"> Today
                                     <span class="today-date"></span>
                                     <span class="today-month"></span>
                                 </p>
                                 <p
                                     class="right-side-navbar d-flex flex-row justify-content-center align-items-center pr-2">
-                                    <img class="sunset-icon pb-2" src="images/icons8-sunset-30.png" alt="sunrise">
-                                    <span class="sunset-time pl-2 "></span>
+                                    <img class="sunset-icon" src="images/icons8-sunset-30.png" alt="sunrise">
+                                    <span class="sunset-time"></span>
                                 </p>
                             </div>
                         </section>
@@ -77,7 +80,7 @@
 
                     <section class="temperature-section white d-flex justify-content-between align-items-center">
                         <button><i class="fa-solid fa-chevron-left"></i> </button>
-                        <p class="temperature-box"><span class="temperature pl-5"> 31</span>°</p>
+                        <p class="temperature-box"><span class="temperature"> 31</span>°</p>
                         <Button><i class="fa-solid fa-chevron-right"></i></Button>
                     </section>
                     <section class="weather-type-section white d-flex justify-content-center w-100 align-items-center">
@@ -90,7 +93,7 @@
                     </section>
                 </section>
 
-                <section class="temp-img w-100 h-50">
+                <section class="temp-img w-100">
                     <img class="weather-img cloudy-img" src="images/Flying kite-bro.png" alt="now">
                     <img class="weather-img sunny-img" src="images/Sunny day-cuate.png" alt="now">
                     <img class="weather-img windy-img" src="images/Windy day-pana.png" alt="now">
@@ -99,8 +102,8 @@
                 </section>
             </div>
 
-            <div class="right-side col-9 h-100 px-5 py-4">
-                <header class="right-side-header w-100 d-flex justify-content-between align-items-center">
+            <div class="right-side col-lg-9">
+                <header class="right-side-header w-100 justify-content-between align-items-center">
                     <div class="welcome-section w-50">
                         <p class="welcome-text">welcome back <span>Daniel</span> !</p>
                         <p class="welcome-section-second-line">check out today's weather information</p>
@@ -115,12 +118,12 @@
                     </div>
                 </header>
 
-                <section class="right-side-top w-100 mt-3">
+                <section class="right-side-top w-100">
                     <div
-                        class="hours-box p-4 d-flex flex-column justify-content-start align-items-center card w-100 h-100 overflow-hidden">
+                        class="hours-box d-flex flex-column justify-content-start align-items-center card w-100 h-100 overflow-hidden">
                         <div class="hours-box-top d-flex justify-content-between align-items-center w-100">
                             <p>Upcoming hours</p>
-                            <div class="hours-box-btns">
+                            <div class="hours-box-btns d-flex">
                                 <button class="precipitaion-btn">
                                     Rain precipitaion
                                     <i class="fa-solid fa-chevron-down"></i>
@@ -132,43 +135,51 @@
                             </div>
                         </div>
                         <div class="border-blue"> </div>
-                        <div class="hours-box-bottom w-100 d-flex justify-content-around pt-4 align-items-center h-100">
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                        <div class="hours-box-bottom w-100 d-flex justify-content-around align-items-center h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="times-temp-hour">Now</span>
                                 <img src="images/icons8-cloudy-50.png" alt="">
                                 <span class="times-temp-degree pl-1">27°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="first-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloudy-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="second-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloud-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="third-hour times-temp-hour"></span>
                                 <img src="images/icons8-sun-50.png" alt="">
                                 <span class="times-temp-degree pl-1">30°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="fourth-hour times-temp-hour"></span>
                                 <img src="images/icons8-sun-50.png" alt="">
                                 <span class="times-temp-degree pl-1">30°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="fifth-hour times-temp-hour"></span>
                                 <img src="images/icons8-cloud-50.png" alt="">
                                 <span class="times-temp-degree pl-1">29°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="sixth-hour times-temp-hour"></span>
                                 <img src="images/icons8-rain-50.png" alt="">
                                 <span class="times-temp-degree pl-1">28°</span>
                             </div>
-                            <div class="d-flex flex-column justify-content-between align-items-center col-1 h-100">
+                            <div
+                                class="hour-detail-box d-flex flex-column justify-content-between align-items-center col-1 h-100">
                                 <span class="seventh-hour times-temp-hour"></span>
                                 <img src="images/icons8-rain-50.png" alt="">
                                 <span class="times-temp-degree pl-1">27°</span>
@@ -177,95 +188,98 @@
                     </div>
                 </section>
 
-                <section class="right-side-bottom w-100 mt-3">
+                <section class="right-side-bottom w-100">
                     <p class="details-box-title">More details of today's weather</p>
 
                     <div
-                        class="right-side-bottom-boxs d-flex flex-column justify-content-start align-items-center w-100 h-100 col-12 mt-3">
+                        class="right-side-bottom-boxs d-flex flex-column justify-content-start align-items-center w-100 h-100 col-12">
                         <div class="first-row-of-boxs w-100 row d-flex justify-content-between align-items-center">
-                            <div class="detail-box card col-3">
+                            <div class="detail-box card">
                                 <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
                                     <h6>Humidity</h6>
                                     <img src="images/icons8-water-64.png" alt="Humidity">
                                 </div>
-                                <div class="detail-box-bottom pt-2">
+                                <div class="detail-box-bottom pt-lg-2">
                                     <p><span class="humidity-percent">82</span>%</p>
                                 </div>
-                                <div class="border-blue"> </div>
+                                <div class="detail-box-border"> </div>
                             </div>
 
-                            <div class="detail-box card col-3">
+                            <div class="detail-box card">
                                 <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
                                     <h6>Wind</h6>
                                     <img src="images/icons8-wind-50.png" alt="Humidity">
                                 </div>
-                                <div class="detail-box-bottom pt-2">
+                                <div class="detail-box-bottom pt-lg-2">
                                     <p><span class="wind-quantity"></span> km/h</p>
                                 </div>
-                                <div class="border-blue"> </div>
+                                <div class="detail-box-border"> </div>
                             </div>
 
-                            <div class="detail-box card col-3">
-                                <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
-                                    <h6>Precipitaion</h6>
-                                    <img src="images/icons8-rain-64.png" alt="Humidity">
-                                </div>
-                                <div class="detail-box-bottom pt-2">
-                                    <p><span>1.5</span> cm</p>
-                                </div>
-                                <div class="border-blue"> </div>
-                            </div>
-                        </div>
-
-                        <div
-                            class="second-row-of-boxs row w-100 row d-flex justify-content-between align-items-center mt-3">
-                            <div class="detail-box card col-3">
-                                <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
-                                    <h6>UV index</h6>
-                                    <img src="images/icons8-sun-white.png" alt="Humidity">
-                                </div>
-                                <div class="detail-box-bottom pt-2">
-                                    <p class="uv-index-text"><span>4</span> medium</p>
-                                </div>
-                                <div class="border-blue"> </div>
-                            </div>
-
-                            <div class="detail-box card col-3">
+                            <div class="detail-box card">
                                 <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
                                     <h6>Feels like</h6>
                                     <img src="images/icons8-temperature-48.png" alt="Humidity">
                                 </div>
-                                <div class="detail-box-bottom pt-2">
+                                <div class="detail-box-bottom pt-lg-2">
                                     <p><span class="feels-like-temp">30</span>°</p>
                                 </div>
-                                <div class="border-blue"> </div>
+                                <div class="detail-box-border"> </div>
                             </div>
 
-                            <div class="detail-box card col-3">
+                        </div>
+
+                        <div
+                            class="second-row-of-boxs row w-100 row d-flex justify-content-between align-items-center mt-md-2 mt-lg-3">
+                            <div class="detail-box card">
+                                <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
+                                    <h6>UV index</h6>
+                                    <img src="images/icons8-sun-white.png" alt="Humidity">
+                                </div>
+                                <div class="detail-box-bottom  pt-lg-2">
+                                    <p class="uv-index-text"><span>4</span> medium</p>
+                                </div>
+                                <div class="detail-box-border"> </div>
+                            </div>
+
+                            <div class="detail-box  card">
+                                <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
+                                    <h6>Precipitaion</h6>
+                                    <img src="images/icons8-rain-64.png" alt="Humidity">
+                                </div>
+                                <div class="detail-box-bottom pt-lg-2">
+                                    <p><span>1.5</span> cm</p>
+                                </div>
+                                <div class="detail-box-border"> </div>
+                            </div>
+
+                            <div class="detail-box card">
                                 <div class="detail-box-top w-100 d-flex justify-content-between align-items-center">
                                     <h6>Chance of rain</h6>
                                     <img src="images/icons8-umbrella-48.png" alt="Humidity">
                                 </div>
-                                <div class="detail-box-bottom pt-2">
+                                <div class="detail-box-bottom  pt-lg-2">
                                     <p><span>67</span>%</p>
                                 </div>
-                                <div class="border-blue"> </div>
+                                <div class="detail-box-border"> </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        <div class="develper-text pl-3 pt-4 w-100 d-flex justify-content-start align-items-start">
-            <span>*Developed by Sina karimi</span>
-            <button class="tooltipp">
-                <i class="github-icon pl-3 fa-brands fa-github"></i>
+        <div class="develper-text pl-3 w-100 d-flex align-items-start">
+            <span>* Developed by Sina karimi</span>
+            <button class="tooltipp github-btn">
+                <a href="https://github.com/sinakarimiorg">
+                    <i class="github-icon fa-brands fa-github"></i>
+                </a>
                 <span class="tooltiptext">GitHub</span>
             </button>
         </div>
     </div>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="js/script.js"></script>
     <!-- Bootstrap cdns -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
