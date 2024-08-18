@@ -25,8 +25,9 @@
 - simple and smooth usage
 - Full Responsive page <br> <br>
 ![Screenshot 2024-08-18 135815](https://github.com/user-attachments/assets/3a73a622-e4d3-4aea-98fd-0b99886f2d87) <br>
-- exciting questions with time limitaion
-
+- The ability to change the degree mode
+-Powerd by a real api and has a dynamic UI/UX 
+  
 ## Installation
 download the zip file or just clone the url of repositorie on your editor application with this command  'git clone (the repo url)' <br>
 - Notice 1: be sure that your sistem has Node js you can download it from [here](https://nodejs.org/en/download/prebuilt-installer)
