@@ -145,12 +145,18 @@ let showData = (data) => {
         snowyIcon.classList.remove('d-none')
         hideImagesFunc()
         snowyImg.classList.remove('d-none')
+    } else if (dataTypeWord === 'Drizzle') {
+        weatherType.innerHTML = 'Windy'
+        hideIcones()
+        windyIcon.classList.remove('d-none')
+        hideImagesFunc()
+        windyImg.classList.remove('d-none')
     }
     else {
         weatherType.innerHTML = data.weather[0].main
         hideIcones()
         hideImagesFunc()
-        windyImg.classList.remove('d-none')
+        sunnyImg.classList.remove('d-none')
     }
     ///////////////Upcoming hours section
     firstHour.innerHTML = `${(nowHour === 24 ? '01' : nowHour + 1)}:00`
