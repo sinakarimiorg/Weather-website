@@ -1,5 +1,33 @@
 @media (min-width: 576px) {}
 
+@media (max-height: 900px) {
+
+    .weather-container {
+        height: 85% !important;
+    }
+
+    .home-box{
+        height: 99% !important;
+    }
+
+    .right-side-top {
+        height: 37% !important;
+    }
+
+    .hours-box{
+        padding: .5rem !important;
+    }
+
+    .right-side-bottom {
+        height: 49% !important;
+    }
+
+    .second-row-of-boxs{
+        margin-top: .7rem !important;
+    }
+
+}
+
 @media (min-height: 750px) {
 
     .search-input {
