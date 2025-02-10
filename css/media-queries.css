@@ -1,5 +1,3 @@
-@media (min-width: 576px) {}
-
 @media (min-height: 750px) {
 
     .search-input {
@@ -164,10 +162,6 @@
         }
     
         .add-city-input-icon {
-            font-size: .9rem;
-        }
-    
-        .search-input {
             font-size: .9rem;
         }
     
@@ -426,9 +420,16 @@
 @media (min-width: 1200px) {
 
     .weather-container {
-        margin: 10% 0;
+        margin: 5% 0;
         width: 80%;
         height: 80%;
+    }
+
+    .weather-container-per {
+        direction: rtl;
+        margin: 5% 0;
+        width: 80%;
+        height: 70%;
     }
 
     .home-box {
@@ -462,14 +463,6 @@
 
     .add-city-input-icon {
         font-size: .9rem;
-    }
-
-    .search-input {
-        font-size: .9rem;
-    }
-
-    .close-search-bar-btn i {
-        font-size: 1rem;
     }
 
     .degree-unit-switch span {
@@ -700,8 +693,6 @@
     }
 
 }
-
-@media (min-height: 1100px) {}
 
 @media (min-width: 1600px) {
     .top-bar {

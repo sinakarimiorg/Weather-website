@@ -12,6 +12,10 @@
     font-family: 'HelveticaBold';
     src: url(/Fonts/HelveticaNeueMedium.otf);
 }
+@font-face {
+    font-family: 'Dana';
+    src: url(/Fonts/DanaFaNum-Regular.woff2);
+}
 
 /* colors */
 :root {
@@ -24,13 +28,15 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: HelveticaNormal;
     overflow: hidden;
 }
 
 body {
     background-color: #B5D8FF;
     height: 100vh;
+    direction: rtl;
+    text-align: right;
+    font-family: Dana;
 }
 
 p {
@@ -56,9 +62,37 @@ button {
 button:focus {
     outline: none;
 }
+/* //////////////////////////Language Bar Styles */
+#lang{
+    position: absolute;
+    top: 10;
+    left: 10;
+    padding: 5px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, .8);
+    border-radius: 10px;
+}
+
+option:focus{
+    border-style: none !important;
+}
+
+select:focus {
+    border: none !important;
+  }
+
+#english {
+    display: none;
+  }
+
+  #persian {
+    display: flex;
+  }
+/* /////////////////////////////////// */
 
 .weather-container {
-    margin: 10% 0;
+    margin: 5% 0;
     width: 80%;
     height: 70%;
 }
@@ -140,11 +174,10 @@ button:focus {
 
 .close-search-bar-btn {
     background-color: #F2BAE9;
-    margin-left: .5rem;
     height: 4.5vh;
 }
 
-.close-search-bar-btn i {
+.add-city-input-icon {
     color: black;
     font-size: .8rem;
     font-weight: 600;
@@ -157,8 +190,6 @@ button:focus {
     background-color: var(--gray);
     position: relative;
     border-radius: 15px;
-    margin-left: .5rem;
-    padding-left: 8px;
 }
 
 .search-input {
@@ -338,7 +369,8 @@ input:checked+.slider:before {
     display: none;
 }
 
-/* //////////////////////////////////////////////////right-side//////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////right-side////////////////////////////////////////////////////////////////////////// */
+
 .right-side {
     padding: .5rem 1rem 1rem 1rem;
     height: 41%;
