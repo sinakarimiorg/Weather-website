@@ -34,9 +34,9 @@
 body {
     background-color: #B5D8FF;
     height: 100vh;
-    direction: rtl;
-    text-align: right;
-    font-family: Dana;
+    direction: ltr;
+    text-align: left;
+    font-family: HelveticaNormal;
 }
 
 p {
@@ -83,11 +83,11 @@ select:focus {
   }
 
 #english {
-    display: none;
+    display: flex;
   }
 
   #persian {
-    display: flex;
+    display: none;
   }
 /* /////////////////////////////////// */
 
